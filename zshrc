@@ -19,8 +19,17 @@ RPROMPT='%*'
 export HOMEBREW_AUTO_UPDATE_SECS=604800
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
-#Handy Functions
+# Handy Functions
 
 function mkcd() {
     mkdir -p "$@" && cd "$_"
+}
+
+#function ipcheck() {
+#    nslookup "$@" | awk '/Address/{print $2}' | sed -n 2p
+#}
+
+function ipcheck() {
+    nslookup "$@" | awk '{print $2}' | sed -n 6p | pbcopy
+    pbpaste
 }
