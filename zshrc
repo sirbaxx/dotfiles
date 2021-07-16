@@ -62,16 +62,16 @@ function mkcd() {
     mkdir -p "$@" && cd "$_"
 }
 
-#Check the ip of a domain name - old version
-#function ipcheck() {
-#    nslookup "$@" | awk '/Address/{print $2}' | sed -n 2p
-#}
+Check the ip of a domain name - old version
+function ipcheck() {
+    nslookup "$@" | awk '/Address/{print $2}' | sed -n 2p
+}
 
 #Check the ip of a domain name
-function ipcheck() {
-    nslookup "$@" | awk '{print $2}' | sed -n 6p | pbcopy
-    pbpaste
-}
+#function ipcheck() {
+#    nslookup "$@" | awk '{print $2}' | sed -n 6p | pbcopy
+#    pbpaste
+#}
 
 #open man page with Preview
 function preman() {
