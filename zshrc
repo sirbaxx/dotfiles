@@ -82,3 +82,5 @@ function preman() {
 function manbbedit () {
  MANWIDTH=120 MANPAGER='col -bx' man $@ | bbedit --clean --view-top -t "man $@"
  }
+
+source /Users/roybax/.config/broot/launcher/bash/br
