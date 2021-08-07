@@ -1,6 +1,9 @@
 #Default proxy icon in the Finder
 defaults write com.apple.finder NSWindowSupportsAutomaticInlineTitle -bool false && killall Finder
 
+# Or show the proxy icon without delay
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 

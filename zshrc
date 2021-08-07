@@ -62,7 +62,7 @@ function mkcd() {
     mkdir -p "$@" && cd "$_"
 }
 
-Check the ip of a domain name - old version
+# Check the ip of a domain name - old version
 function ipcheck() {
     nslookup "$@" | awk '/Address/{print $2}' | sed -n 2p
 }
